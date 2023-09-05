@@ -14,6 +14,7 @@ Page({
   data: {
     onRotation: false,
     reward: 0,
+    stoppingName:'',
     prize: [
       {
         'name': '爆炒鱿鱼须',
@@ -232,10 +233,10 @@ Page({
       // 平均值
       const averageRotate = 360 / this.data.prize.length
       // 是否有抽奖机会
-      if (this.properties.chance === 0) {
-        this.triggerEvent('none')
-        return
-      }
+      // if (this.properties.chance === 0) {
+      //   this.triggerEvent('none')
+      //   return
+      // }
       // 防止转动时点击开始按钮
       if (!this.data.onRotation) {
         this.setData({
@@ -251,12 +252,15 @@ Page({
             rotate: deg,
             ease: 'ease-in-out'
           }
-        ], 5000, function () {
+        ], 5000  + Math.random()*1000, function () {
           this.setData({
             onRotation: false
           })
+          this.setData({
+            stoppingName:this.data.prize[this.data.reward].name
+          })
           // 发送自己的抽奖信息
-          this.triggerEvent('onResult', this.properties.prize[this.data.reward])
+          // this.triggerEvent('onResult', this.properties.prize[this.data.reward])
         }.bind(this))
       }
     },

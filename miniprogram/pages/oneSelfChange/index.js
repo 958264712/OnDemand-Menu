@@ -14,18 +14,25 @@ Page({
   data: {
     onRotation: false,
     reward: 0,
+    inputValue:'',
     prize: [
-    {
-      'name': '鸡汤',
+    ],
+  },
+  resetForm(e){
+    this.setData({
+      prize:[]
+    })
+  },
+  addForm(e){
+    this.data.prize = [{
+      'name':e.detail.value.input,
       'winnning': 0.1,
-      'count': 2
-    }, 
-    {
-      'name': '炒排骨',
-      'winnning': 0.1,
-      'count': 1
-    }
-  ],
+      'count': this.data.prize.length + 1
+    }].concat(this.data.prize)
+    this.setData({
+      prize: this.data.prize
+    })
+    // e.detail.value.input = ''
   },
     getRange(winning) {
       let temp = []

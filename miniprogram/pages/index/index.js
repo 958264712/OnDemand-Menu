@@ -33,7 +33,6 @@ Page({
     selectedEnv: envList[0],
     haveCreateCollection: false
   },
-
   onClickPowerInfo(e) {
     const index = e.currentTarget.dataset.index;
     const powerList = this.data.powerList;

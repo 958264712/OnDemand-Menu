@@ -126,6 +126,9 @@ page {
 .turntable .point view{
   text-align: center;
 }
+.stopping{
+  margin-bottom:20px;
+}
 .turntable .point::after {
   content: '';
   left: 50%;

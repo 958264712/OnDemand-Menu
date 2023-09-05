@@ -4,6 +4,10 @@
   <view class="title">饮品店铺种类</view>
 
   <view class="top_tip">该喝什么奶茶呢？？</view>
+
+  <view class="stopping">
+    <input value="{{stoppingName}}" placeholder="将显示出您随机到的奶茶"  style="border: 1px solid #ccc;height:40px;"/>
+  </view>
   <view class="turntable">
     <view class="wrapper">
       <view class="item" wx:for="{{prize}}" wx:key="index" wx:item="item" style="{{computed.rotate(index, prize.length)}}">

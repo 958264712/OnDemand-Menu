@@ -12,6 +12,10 @@ App({
         // env: 'my-env-id',
         traceUser: true,
       });
+      wx.showShareMenu({
+        withShareTicket: true,
+        menus: ['shareAppMessage', 'shareTimeline']
+      })
     }
 
     this.globalData = {};

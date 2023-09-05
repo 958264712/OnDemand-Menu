@@ -5,7 +5,9 @@ page {
   background-color: #f6f6f6;
   padding-bottom: 60rpx;
 }
-
+.stopping{
+  margin-bottom:20px;
+}
 .title {
   font-family: PingFang SC;
   font-weight: 500;

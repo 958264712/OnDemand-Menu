@@ -12,7 +12,8 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "随选菜单",
     "navigationBarTextStyle": "black",
-    "lazyCodeLoading": "requiredComponents"
+    "lazyCodeLoading": "requiredComponents",
+    "enableShareAppMessage":"true"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

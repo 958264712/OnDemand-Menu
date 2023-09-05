@@ -142,5 +142,14 @@ page {
 .turntable .wrapper .item:nth-child(6) {
   transform: rotate(-330deg);
 }
-
+.input{
+  width:700rpx;
+  height:80rpx;
+  border: 1px solid #000;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.button{
+  display: flex;
+}
 

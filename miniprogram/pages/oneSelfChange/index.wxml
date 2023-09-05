@@ -3,14 +3,21 @@
 
   <view class="title">自己选择</view>
 
-  <view class="top_tip">自己填写选项，旋转轮盘抉择</view>
+  <view class="top_tip">自己填写选项，旋转轮盘抉择。需要输入两次以上选项</view>
+  <form bindsubmit='addForm' bindreset="resetForm">
+    <input class="input" type="text"  auto-focus placeholder="请输入您需要的选项" name='input' />
+    <view class="button">
+      <button type="primary" formType="submit" >添加</button>
+      <button type="warn" formType="reset">清空</button>
+    </view>
+  </form>
   <view class="turntable">
     <view class="wrapper">
-      <view class="item" wx:for="{{prize}}" wx:key="index" wx:item="item" style="{{computed.rotate(index, prize.length)}}">
-        <view class="item-inner" style="{{computed.inner(prize.length)}}">
+      <view  class="item" wx:for="{{prize}}"wx:key="count" style="{{computed.rotate(index, prize.length)}}">
+        <view class="item-inner"  wx:key="{{item.count}}"  style="{{computed.inner(prize.length)}}">
           <text style="{{computed.text(prize.length)}}">{{item.name}}</text>
         </view>
-      </view>
+      </view >
     </view>
     <view class="point" bindtap="onPoint">
       <text>开始</text>
